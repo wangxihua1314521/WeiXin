@@ -1,0 +1,40 @@
+{
+  "name": "weixin",
+  "version": "1.0.0",
+  "description": "node wechat",
+  "main": "server/app.js",
+  "scripts": {
+    "_i": "npm install --registry=http://registry.npm.taobao.org/ --disturl=https://npm.taobao.org/dist",
+    "babel": "babel servers -d build/servers -w",
+    "nodemon": "nodemon build/servers/app.js",
+    "start": "babel servers -d build/servers && pm2 start build/servers/app.js",
+    "stop" : "pm2 stop build/servers/app.js",
+    "restart" : "npm stop && npm start"
+  },
+  "author": "svon@svon.org",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.6",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-es2015-classes": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-runtime": "^6.18.0",
+    "body-parser": "^1.15.2",
+    "chokidar": "^1.6.1",
+    "express": "^4.14.0",
+    "swig": "^1.4.2",
+    "wechat-api": "^1.31.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rollup": "^2.5.1",
+    "gulp-sourcemap": "^1.0.1"
+  }
+}
